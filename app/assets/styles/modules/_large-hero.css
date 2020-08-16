@@ -1,8 +1,15 @@
 .large-hero {
   border-bottom: 10px solid $mainBlue;
   position: relative;
+  @mixin atMedium {
+    padding: 0;
+  }
   &__image {
+    width: 530px;
     display: block;
+    @mixin atSmall {
+      width: 100%;
+    }
   }
   &__text-content {
     position: absolute;
@@ -14,6 +21,7 @@
   }
 
   &__title {
+    padding-top: 60px;
     font-weight: 300;
     color: $mainBlue;
     margin: 0;
@@ -27,6 +35,7 @@
     color: $mainBlue;
     font-size: 1.1rem;
     margin: 0;
+
     @mixin atSmall {
       font-size: 2.9rem;
     }
